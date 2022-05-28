@@ -1,13 +1,171 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body, html{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #F8FAFD;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: 'Inter', sans-serif;
+  color: #000;
+}
+
+*{
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.wrapper{
+  width: 1100px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.title{
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.header{
+  width: 100%;
+  padding: 20px 0;
+  background: #ebf3ff;
+}
+
+.header__course.flex{
+  justify-content: center;
+}
+
+.header__courseitem{
+  margin: 0 30px;
+  padding: 7px 10px;
+  border: 1px solid #4277FF;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.header__courseitem img{
+  display: block;
+  width: 20px;
+}
+
+.header__courseitem span{
+  font-size: 16px;
+  margin: 0 3px;
+}
+
+.converter{
+  padding: 60px 0;
+}
+
+.converter__box{
+  padding: 50px;
+  border-radius: 15px;
+  background: #ebf3ff;
+  width: 700px;
+  margin: 0 auto;
+  border: 1px solid #d7e6f3;
+}
+
+.converter__subtitle{
+  font-size: 18px;
+  color: #4e4e4e;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.converter__wrap.flex{
+  justify-content: center;
+}
+
+.converter__item{
+  margin: 0 15px;
+  width: 250px;
+}
+
+.converter__equal{
+  width: 20px;
+}
+
+.converter__equal img{
+  display: block;
+  width: 100%;
+}
+
+.converter__select{
+  width: 125px;
+}
+
+.converter__input{
+  width: 115px;
+}
+
+.converter__input input{
+  display: block;
+  width: 100%;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  height: 38px;
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+.select__option{
+  display: flex;
+  align-items: center;
+}
+.select__option img{
+  display: inline-block;
+  width: 20px;
+  margin-right: 5px;
+}
+
+@media (max-width: 768px){
+  .title{
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .header__courseitem{
+    margin-bottom: 10px;
+  }
+
+  .header__courseitem:last-child{
+    margin-bottom: 0;
+  }
+
+  .header__courseitem span{
+    font-size: 15px;
+  }
+
+  .converter__box{
+    width: 100%;
+    padding: 50px 30px;
+  }
+
+  .converter__wrap.flex{
+    flex-direction: column;
+  }
+
+  .converter__subtitle{
+    font-size: 16px;
+  }
+
+  .converter__item{
+    margin: 15px auto;
+  }
 }
