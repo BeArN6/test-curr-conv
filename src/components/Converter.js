@@ -26,7 +26,7 @@ const Converter = ({requestOptions}) => {
     const [amountTo, updateAmountTo] = useState('');
 
     useEffect(() => {
-        fetch(`https://api.apilayer.com/exchangerates_data/latest?symbols=${toCurr.value}&base=${fromCurr.value}`, requestOptions)
+        fetch(`https://api.apilayer.com/fixer/latest?symbols=${toCurr.value}&base=${fromCurr.value}`, requestOptions)
         .then(response => response.json())
         .then(result => {
             const firstEl = result.rates[Object.keys(result.rates)[0]];
@@ -53,6 +53,9 @@ const Converter = ({requestOptions}) => {
         } else if(result === convItem && convName === 'to'){
             updateFromCurr(selectOpt[index]);
         }
+
+        updateAmountFrom('');
+        updateAmountTo('');
         return result;
     }
 
